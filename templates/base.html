@@ -39,6 +39,9 @@
         .friend-card:hover {
             transform: translateY(-2px);
         }
+        .logoutbtn{
+            color: black;
+        }
     </style>
     
     {% block extra_css %}{% endblock %}
@@ -94,7 +97,7 @@
                             <li>
                                 <form method="post" action="{% url 'accounts:logout' %}" style="display:inline;">
                                     {% csrf_token %}
-                                    <button type="submit" class="btn btn-outline-light ms-2">
+                                    <button type="submit" class="btn btn-outline-light ms-2 logoutbtn">
                                         <i class="bi bi-box-arrow-right"></i> Logout
                                     </button>
                                 </form>
